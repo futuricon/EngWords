@@ -25,6 +25,9 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
+        <Grid>
+            
+        </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
@@ -50,7 +53,10 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <!--<TabControl Grid.Row="2" Background="{x:Null}" BorderBrush="{x:Null}">
+                
+            </TabControl>-->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel Margin="0,20,20,20" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox x:Name="EngIn" materialDesign:HintAssist.Hint=" English" Width="200" Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" Margin="5,0,5,57"/>
                 </StackPanel>
