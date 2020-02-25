@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace EngWords.Models
@@ -10,6 +11,6 @@ namespace EngWords.Models
         public string Eng { get; set; }
         public string Rus { get; set; }
         public string Uzb { get; set; }
-        
+       
     }
 }
