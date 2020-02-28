@@ -19,6 +19,10 @@ namespace EngWords.ViewModels
         private string _engTxtIn;
         private string _rusTxtIn;
         private string _uzbTxtIn;
+        
+        private string _engTxtInX;
+        private string _rusTxtInX;
+        private string _uzbTxtInX;
 
         private string _engLbOut;
         private string _rusLbOut;
@@ -26,6 +30,8 @@ namespace EngWords.ViewModels
 
         private string _rbLbOutRG;
         private string _lLbOutRG;
+
+        private int temp;
 
         public string EngTxtIn { get { return _engTxtIn; } set { SetProperty(ref _engTxtIn, value); } }
         public string RusTxtIn { get { return _rusTxtIn; } set { SetProperty(ref _rusTxtIn, value); } }
@@ -87,6 +93,9 @@ namespace EngWords.ViewModels
         {
             if (_engTxtIn != null && _engTxtIn != "" && _rusTxtIn != null && _rusTxtIn != "" && _uzbTxtIn != null && _uzbTxtIn != "")
             {
+                _engTxtInX = _engTxtIn;
+                _rusTxtInX = _rusTxtIn;
+                _uzbTxtInX = _uzbTxtIn;
                 Task.Run(async () => await SaveWords());
 
                 EngTxtIn = null;
@@ -99,7 +108,7 @@ namespace EngWords.ViewModels
 
         public async Task SaveWords() => await Task.Run(() =>
         {
-            Word wr = new Word { Eng = _engTxtIn, Rus = _rusTxtIn, Uzb = _uzbTxtIn };
+            Word wr = new Word { Eng = _engTxtInX, Rus = _rusTxtInX, Uzb = _uzbTxtInX };
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
                 context.Words.Add(wr);
@@ -113,6 +122,7 @@ namespace EngWords.ViewModels
             {
                 int toSkip = rnd.Next(0, context.Words.Count());
                 var randomword = context.Words.Skip(toSkip).FirstOrDefault();
+                //temp = randomword.Id;
                 EngLbOut = randomword.Eng.ToString();
                 RusLbOut = randomword.Rus.ToString();
                 UzbLbOut = randomword.Uzb.ToString();
