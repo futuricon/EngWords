@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="EngWords.Views.WordsListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:behaviours="clr-namespace:WareHouse.Behaviours"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:local="clr-namespace:EngWords.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#3282b8"/>
+        <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="White"/>
+        <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#3282b8"/>
+        <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="White"/>
+        <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#0f4c75"/>
+        <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="White"/>
+
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" 
+                                           Storyboard.TargetName="listView">
+                <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames  Storyboard.TargetProperty="(UIElement.Visibility)" 
+                                            Storyboard.TargetName="ButtonCloseList">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseList">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        
+        <Button Name="ButtonCloseList" Height="450" Width="800"
+                Background="#4C000000" BorderBrush="{x:Null}" 
+                VerticalAlignment="Bottom" Foreground="{x:Null}"
+                Command="{Binding CloseWordsList}"
+                Cursor="Hand" Padding="0"/>
+        
+        <Grid Margin="100,50">
+            <StackPanel>
+                <Rectangle Height="51" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+            </StackPanel>
+            <ListView x:Name="listView" ItemsSource="{Binding WordsCollection}" 
+                  behaviours:GridViewColumnResize.Enabled="True" 
+                  ItemContainerStyle="{StaticResource LVItemStyle}" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                  HorizontalContentAlignment="Stretch" Foreground="#DDF9F9F9" 
+                  Background="{x:Null}" BorderBrush="{x:Null}">
+                <ListView.View>
+                    <GridView ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+
+                        <GridViewColumn Header="English" behaviours:GridViewColumnResize.Width="*" HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="Auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
+                                        <Label Content="{Binding Eng}" ContentStringFormat="{}{0} pcs" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                    </Border>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Русский" behaviours:GridViewColumnResize.Width="*"  HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="Auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
+                                        <Label Content="{Binding Rus}" ContentStringFormat="## ### ### ###.00 sum" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                    </Border>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="O`zbekcha" behaviours:GridViewColumnResize.Width="*"  HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="Auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
+                                        <Label Content="{Binding Uzb}" ContentStringFormat="## ### ### ###.00 sum" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                    </Border>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Edit" HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="160" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Rectangle Width="1" Height="50" Fill="#171a20" HorizontalAlignment="Left" Margin="-6,-7,0,-7"/>
+                                        <StackPanel Orientation="Horizontal" Margin="2,5,0,5">
+                                           
+                                            <Button CommandParameter="{Binding}" 
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OpenNewDialogCommand}" 
+                                                    Margin="9,0,0,0" HorizontalAlignment="Right" 
+                                                    Height="35" VerticalAlignment="Center" Width="35" BorderBrush="#00000000" >
+                                                <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+                                            </Button>
+
+                                            <Button CommandParameter="{Binding}" 
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.ViewIncomeCommand}" 
+                                                    Margin="7,0,0,0" HorizontalAlignment="Right" Height="35" 
+                                                    VerticalAlignment="Center" Width="35" BorderBrush="#00000000" >
+                                                <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+                                            </Button>
+                                            <Button CommandParameter="{Binding}" 
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.DeleteIncomeCommand}" 
+                                                    Margin="7,0,0,0" HorizontalAlignment="Right" Height="35" 
+                                                    VerticalAlignment="Center" Width="35" BorderBrush="#00000000" >
+                                                <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</UserControl>

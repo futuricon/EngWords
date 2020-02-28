@@ -12,6 +12,8 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.2",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.2",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19",
+          "MicrosoftExpressionInteractions": "3.0.40218",
           "Prism.Core": "7.2.0.1422",
           "Prism.Unity": "7.2.0.1422",
           "Prism.Wpf": "7.2.0.1422"
@@ -287,6 +289,22 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "3.1.2.0",
             "fileVersion": "3.100.220.6706"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.19.35512"
+          }
+        }
+      },
+      "MicrosoftExpressionInteractions/3.0.40218": {
+        "runtime": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "3.0.40218.0"
           }
         }
       },
@@ -669,6 +687,20 @@
       "sha512": "sha512-WGtoFWY9yc9HGMG6ObDNQPz9dBP+xz/GqFe2dKjdE/cSdXFEKxCFTyYCzL/e8kxVkc/Bq9qjOsXRWydvn0g9Uw==",
       "path": "microsoft.extensions.primitives/3.1.2",
       "hashPath": "microsoft.extensions.primitives.3.1.2.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.19",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512"
+    },
+    "MicrosoftExpressionInteractions/3.0.40218": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QPi+KYM//nirPGmTsKl3xLQAyfxxYUsyERBun3am32QQnVB+3I3izRbtcYLgy5kcBuAX9ZhHzWFD7n7SEu0WPw==",
+      "path": "microsoftexpressioninteractions/3.0.40218",
+      "hashPath": "microsoftexpressioninteractions.3.0.40218.nupkg.sha512"
     },
     "Prism.Core/7.2.0.1422": {
       "type": "package",

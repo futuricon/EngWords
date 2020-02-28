@@ -64,3 +64,9 @@ C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\runtim
 C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\Users\Futuricon\source\repos\EngWords\EngWords\bin\Debug\netcoreapp3.1\Microsoft.Expression.Interactions.dll
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\Dictionaries\DictionaryWordsList.baml
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\WordsListView.g.cs
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\WordsListView.baml

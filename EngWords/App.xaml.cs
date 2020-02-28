@@ -24,7 +24,7 @@ namespace EngWords
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<WordsListView>();
         }
     }
 }
