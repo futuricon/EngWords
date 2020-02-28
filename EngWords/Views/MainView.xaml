@@ -12,7 +12,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Icon="/En.ico">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#3282b8"/>
         <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="White"/>
