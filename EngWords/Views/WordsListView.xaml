@@ -102,19 +102,23 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Edit" HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="80" >
+                        <GridViewColumn Header="Edit" HeaderContainerStyle="{DynamicResource GridViewColumnHeaderStyle}" Width="90" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <Rectangle Width="1" Height="50" Fill="#171a20" HorizontalAlignment="Left" Margin="-6,-7,0,-7"/>
                                         <StackPanel Orientation="Horizontal" Margin="2,5,0,5">
 
-                                            <Button Margin="0,0,0,0" HorizontalAlignment="Right" Padding="0" Background="#00000000"
+                                            <Button CommandParameter="{Binding}"
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.EditWord}"
+                                                    Margin="0,0,0,0" HorizontalAlignment="Right" Padding="0" Background="#00000000"
                                                     Height="35" VerticalAlignment="Center" Width="35" BorderBrush="#00000000" >
                                                 <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" />
                                             </Button>
 
-                                            <Button Margin="0,0,0,0" HorizontalAlignment="Right" Padding="0" Background="#00000000"
+                                            <Button CommandParameter="{Binding}"
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.DeleteWord}"
+                                                    Margin="0,0,0,0" HorizontalAlignment="Right" Padding="0" Background="#00000000"
                                                     Height="35" VerticalAlignment="Center" Width="35" BorderBrush="#00000000" >
                                                 <materialDesign:PackIcon Kind="Delete" Width="25" Height="25" />
                                             </Button>
