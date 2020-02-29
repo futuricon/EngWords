@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using EngWords.Models.Repositories;
 using EngWords.Views;
 using Prism.Ioc;
 using Prism.Unity;
@@ -19,12 +20,12 @@ namespace EngWords
     {
         protected override Window CreateShell()
         {
-            var sell = Container.Resolve<MainView>();
-            return sell;
+            return Container.Resolve<MainView>();
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<WordsListView>();
+            containerRegistry.Register<IWordRepository, WordRepository>();
         }
     }
 }

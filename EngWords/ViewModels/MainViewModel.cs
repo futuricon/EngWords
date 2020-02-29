@@ -28,10 +28,10 @@ namespace EngWords.ViewModels
         private string _rusLbOut;
         private string _uzbLbOut;
 
-        private string _rbLbOutRG;
+        private string _rLbOutRG;
         private string _lLbOutRG;
 
-        private int temp;
+        private int temp = 0;
 
         public string EngTxtIn { get { return _engTxtIn; } set { SetProperty(ref _engTxtIn, value); } }
         public string RusTxtIn { get { return _rusTxtIn; } set { SetProperty(ref _rusTxtIn, value); } }
@@ -41,7 +41,7 @@ namespace EngWords.ViewModels
         public string RusLbOut { get { return _rusLbOut; } set { SetProperty(ref _rusLbOut, value); } }
         public string UzbLbOut { get { return _uzbLbOut; } set { SetProperty(ref _uzbLbOut, value); } }
 
-        public string RLBOutRG { get { return _rbLbOutRG; } set { SetProperty(ref _rbLbOutRG, value); } }
+        public string RLBOutRG { get { return _rLbOutRG; } set { SetProperty(ref _rLbOutRG, value); } }
         public string LLbOutFG { get { return _lLbOutRG; } set { SetProperty(ref _lLbOutRG, value); } }
 
         public DelegateCommand SaveWord { get; private set; }
@@ -120,13 +120,22 @@ namespace EngWords.ViewModels
         {
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
-                int toSkip = rnd.Next(0, context.Words.Count());
-                var randomword = context.Words.Skip(toSkip).FirstOrDefault();
-                //temp = randomword.Id;
+                Word randomword = GetRandomId();
+                Word GetRandomId()
+                {
+                    int toSkip = rnd.Next(0, context.Words.Count());
+                    var randomword = context.Words.Skip(toSkip).FirstOrDefault();
+
+                    return randomword.Id != temp ? randomword : GetRandomId();
+                }
+
+                temp = randomword.Id;
+
                 EngLbOut = randomword.Eng.ToString();
                 RusLbOut = randomword.Rus.ToString();
                 UzbLbOut = randomword.Uzb.ToString();
             }
         });
+
     }
 }

@@ -13,9 +13,6 @@ using System.Windows.Shapes;
 
 namespace EngWords.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для WordsListView.xaml
-    /// </summary>
     public partial class WordsListView : UserControl
     {
         public WordsListView()

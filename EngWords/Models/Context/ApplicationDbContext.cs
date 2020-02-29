@@ -11,8 +11,6 @@ namespace EngWords.Models.Context
 
         public ApplicationDbContext()
         {
-            // This is the magic line that made it work for me
-            //SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_e_sqlite3());
             Database.EnsureCreated();
         }
 

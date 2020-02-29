@@ -11,6 +11,5 @@ namespace EngWords.Models
         public string Eng { get; set; }
         public string Rus { get; set; }
         public string Uzb { get; set; }
-       
     }
 }

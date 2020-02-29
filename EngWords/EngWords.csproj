@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <None Remove="En.ico" />
-    <None Remove="Views\check.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +31,6 @@
 
   <ItemGroup>
     <Resource Include="En.ico" />
-    <Resource Include="Views\check.png" />
   </ItemGroup>
 
 </Project>
