@@ -41,8 +41,8 @@ namespace EngWords.ViewModels
         public string RusLbOut { get { return _rusLbOut; } set { SetProperty(ref _rusLbOut, value); } }
         public string UzbLbOut { get { return _uzbLbOut; } set { SetProperty(ref _uzbLbOut, value); } }
 
-        public string RLBOutRG { get { return _rLbOutRG; } set { SetProperty(ref _rLbOutRG, value); } }
-        public string LLbOutFG { get { return _lLbOutRG; } set { SetProperty(ref _lLbOutRG, value); } }
+        public string RLBOutFG { get { return _rLbOutRG; } set { SetProperty(ref _rLbOutRG, value); } }
+        public string LLBOutFG { get { return _lLbOutRG; } set { SetProperty(ref _lLbOutRG, value); } }
 
         public DelegateCommand SaveWord { get; private set; }
         public DelegateCommand ShowTheRest { get; private set; }
@@ -69,23 +69,25 @@ namespace EngWords.ViewModels
 
         private void PaintFG()
         {
-            RLBOutRG = "#DDFFFFFF";
-            LLbOutFG = "#DDFFFFFF";
+            RLBOutFG = "#DDFFFFFF";
+            LLBOutFG = "#DDFFFFFF";
         }
 
         private void ShowRandomWord()
         {
             int tempx = rndFG.Next(2);
-            if (tempx == 1)
-            {
-                RLBOutRG = "#DDFFFFFF";
-                LLbOutFG = "#00000000";
-            }
-            else
-            {
-                RLBOutRG = "#00000000";
-                LLbOutFG = "#DDFFFFFF";
-            }
+            //if (tempx == 1)
+            //{
+            //    RLBOutRG = "#DDFFFFFF";
+            //    LLbOutFG = "#00000000";
+            //}
+            //else
+            //{
+            //    RLBOutRG = "#00000000";
+            //    LLbOutFG = "#DDFFFFFF";
+            //}
+            RLBOutFG = "#00000000";
+            LLBOutFG = "#DDFFFFFF";
             Task.Run(async () => await GetRandomWord());
         }
 

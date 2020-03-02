@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Extended.Wpf.Toolkit": {
+              "target": "Package",
+              "version": "[3.8.1, )"
+            },
             "MaterialDesignThemes": {
               "target": "Package",
               "version": "[3.0.1, )"

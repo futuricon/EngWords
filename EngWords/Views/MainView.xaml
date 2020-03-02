@@ -12,7 +12,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Icon="/En.ico">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize" Icon="/En.ico">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#3282b8"/>
         <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="White"/>
@@ -62,7 +62,7 @@
     <Grid Background="#1b262c">
 
         <!--#region MainMenu-->
-        <Grid>
+        <Grid x:Name="listG">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="200"/>
@@ -79,15 +79,15 @@
                 </Button>
             </StackPanel>
             
-            <StackPanel Margin="60,0,0,0" Orientation="Horizontal" Grid.Row="1" 
-                        HorizontalAlignment="Left" Cursor="Hand">
+            <StackPanel Margin="0,0,0,0" Orientation="Horizontal" Grid.Row="1" 
+                        HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Center">
                 
                 <StackPanel Margin="0,20,20,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label Content="{Binding EngLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         x:Name="EngOut" Width="200" Height="30" 
                         Margin="5,0,5,57" BorderThickness="0,0,0,1" 
-                        BorderBrush="#FF0F4C75" Foreground="{Binding RLBOutRG}"/>
+                        BorderBrush="#FF0F4C75" Foreground="{Binding LLBOutFG}"/>
                 </StackPanel>
                 
                 <StackPanel Margin="0,20,0,20" Orientation="Vertical" 
@@ -95,7 +95,7 @@
                     <Label Content="{Binding RusLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         x:Name="RusOut" Width="200" Height="30" 
                         Margin="5,0,5,25" BorderThickness="0,0,0,1" 
-                        BorderBrush="#FF0F4C75" Foreground="{Binding LLbOutFG}"/>
+                        BorderBrush="#FF0F4C75" Foreground="{Binding RLBOutFG}"/>
                     <Button Command="{Binding ShowTheRest}"
                         Content="Show" Background="#0f4c75" 
                         BorderBrush="#FF0F4C75" Margin="5,0,5,0"/>
@@ -106,7 +106,7 @@
                     <Label Content="{Binding UzbLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         x:Name="UzbOut" Width="200" Height="30" 
                         Margin="5,0,5,25" BorderThickness="0,0,0,1" 
-                        BorderBrush="#FF0F4C75" Foreground="{Binding LLbOutFG}"/>
+                        BorderBrush="#FF0F4C75" Foreground="{Binding RLBOutFG}"/>
                     <Button Command="{Binding Randomize}"
                         Content="Random" Background="#0f4c75" 
                         BorderBrush="#FF0F4C75" Margin="5,0,5,0"/>
@@ -114,8 +114,8 @@
                 
             </StackPanel>
 
-            <StackPanel Margin="60,0,0,0" Grid.Row="2" Orientation="Horizontal" 
-                        HorizontalAlignment="Left">
+            <StackPanel Margin="0,0,0,0" Grid.Row="2" Orientation="Horizontal" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center">
                 
                 <StackPanel Margin="0,20,20,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -147,7 +147,7 @@
         </Grid>
         <!--#endregion MainMenu-->
 
-        <Button Name="ButtonCloseMenu" Height="450" Width="800"
+        <Button Name="ButtonCloseMenu" Height="{Binding ActualHeight, ElementName=listG}"
                 Background="#4C000000" BorderBrush="{x:Null}" 
                 VerticalAlignment="Bottom" Foreground="{x:Null}"
                 Visibility="Hidden" Cursor="Hand" Padding="0"/>

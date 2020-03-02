@@ -39,7 +39,12 @@ namespace EngWords.ViewModels
 
         private void EditWordFrom(Word obj)
         {
-            //_regionManager.RequestNavigate("ContentRegion", "");
+            var parameters = new NavigationParameters();
+            parameters.Add("word", obj);
+
+            if (obj != null)
+                _regionManager.RequestNavigate("ContentRegion", "UpdateWordView", parameters);
+            //_regionManager.RequestNavigate("ContentRegion", "UpdateWordView");
         }
 
         private void DeleteWordFrom(Word word)

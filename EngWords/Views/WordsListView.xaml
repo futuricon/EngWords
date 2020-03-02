@@ -6,6 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:behaviours="clr-namespace:WareHouse.Behaviours"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:local="clr-namespace:EngWords.Views"
              mc:Ignorable="d" 
@@ -37,17 +38,24 @@
             <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
         </EventTrigger>
     </UserControl.Triggers>
-    <Grid>
-
-        <Button Name="ButtonCloseList" Height="450" Width="800"
+    <Grid x:Name="listG">
+        <Button  Name="ButtonCloseList" 
                 Background="#4C000000" BorderBrush="{x:Null}" 
-                VerticalAlignment="Bottom" Foreground="{x:Null}"
+                VerticalAlignment="Stretch" Foreground="{x:Null}"
                 Command="{Binding CloseWordsList}"
-                Cursor="Hand" Padding="0"/>
+                Cursor="Hand" Padding="0" Height="{Binding ActualHeight, ElementName=listG}"/>
         
-        <Grid Margin="100,50">
+        <Grid Margin="100,50,100,50">
             <StackPanel>
                 <Rectangle Height="51" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
+                <Rectangle Height="47" Fill="#404955"/>
+                <Rectangle Height="47" Fill="#1b262c"/>
                 <Rectangle Height="47" Fill="#404955"/>
                 <Rectangle Height="47" Fill="#1b262c"/>
                 <Rectangle Height="47" Fill="#404955"/>
@@ -132,6 +140,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+            
         </Grid>
         
     </Grid>
