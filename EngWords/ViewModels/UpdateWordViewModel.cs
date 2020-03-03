@@ -17,37 +17,41 @@ namespace EngWords.ViewModels
         private string _rusTxtUp;
         private string _uzbTxtUp;
 
+        IRegionManager _regionManager;
+
         public string EngTxtUp { get { return _engTxtUp; } set { SetProperty(ref _engTxtUp, value); } }
         public string RusTxtUp { get { return _rusTxtUp; } set { SetProperty(ref _rusTxtUp, value); } }
         public string UzbTxtUp { get { return _uzbTxtUp; } set { SetProperty(ref _uzbTxtUp, value); } }
 
         public DelegateCommand<Word> UpdateWord { get; private set; }
-        public DelegateCommand CancelUpdate { get; private set; }
+        public DelegateCommand<object> CancelUpdate { get; private set; }
 
         public UpdateWordViewModel(IRegionManager regionManager, IWordRepository wordRepository)
         {
+            _regionManager = regionManager;
             UpdateWord = new DelegateCommand<Word>(UpdateWordFrom);
-            CancelUpdate = new DelegateCommand(CancelUpdateFrom);
+            CancelUpdate = new DelegateCommand<object>(CancelUpdateFrom);
         }
 
-        private void CancelUpdateFrom()
+        private void CancelUpdateFrom(object obj)
         {
-            Task.Run(async () => await SaveWords());
+            _regionManager.Regions["ContentRegion"].Remove(obj);
+                /*Region["RegionName"].Remove(view);*/
         }
 
         private void UpdateWordFrom(Word obj)
         {
-            
+            Task.Run(async () => await UpdateWordById());
         }
 
-        public async Task SaveWords() => await Task.Run(() =>
+        public async Task UpdateWordById() => await Task.Run(() =>
         {
             Word wr = new Word { Eng = EngTxtUp, Rus = RusTxtUp, Uzb = UzbTxtUp };
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
                 //context.Words.Add(wr);
-                //context.Words.
-                //context.SaveChanges();
+                context.Words.Update(wr);
+                context.SaveChanges();
             }
         });
 

@@ -11,7 +11,12 @@
              xmlns:local="clr-namespace:EngWords.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#4C000000">
+    <Grid>
+        <Rectangle Fill="#7F000000">  
+            <Rectangle.Effect>
+                <BlurEffect Radius="15" KernelType="Gaussian"/>
+            </Rectangle.Effect>
+        </Rectangle>
         <Grid Background="#1b262c" Height="190" Width="740" VerticalAlignment="Stretch" 
               HorizontalAlignment="Stretch">
             <StackPanel Margin="0,0,0,0" Grid.Row="2" Orientation="Horizontal" 
@@ -31,16 +36,18 @@
                              x:Name="RusIn" materialDesign:HintAssist.Hint=" Russian" Width="200" 
                              Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
                              Margin="5,0,5,25"/>
-                    <Button Content="Cancle" Command="{Binding CancelUpdate}" Background="#0f4c75" 
+                    <Button Content="Cancle" CommandParameter="{Binding}"
+                            Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=DataContext.CancelUpdate}"
+                            Background="#0f4c75" 
                             BorderBrush="#FF0F4C75" Margin="5,0,5,0">
-                        <i:Interaction.Triggers>
+                        <!--<i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ei:CallMethodAction MethodName="Close"
                                                   TargetObject="{Binding RelativeSource={RelativeSource
                                                   Mode=FindAncestor,
                                                   AncestorType=Window}}" />
                             </i:EventTrigger>
-                        </i:Interaction.Triggers>
+                        </i:Interaction.Triggers>-->
                     </Button>
                 </StackPanel>
 
