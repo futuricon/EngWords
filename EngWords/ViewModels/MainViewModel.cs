@@ -49,9 +49,11 @@ namespace EngWords.ViewModels
         public DelegateCommand Randomize { get; private set; }
         public DelegateCommand OpenWordsList { get; private set; }
 
+        public DelegateCommand OpenTestView { get; private set; }
+
         public Random rnd = new Random();
         public Random rndFG = new Random();
-        private readonly IRegionManager _regionManager;
+        private IRegionManager _regionManager;
 
         public MainViewModel(IRegionManager regionManager)
         {
@@ -59,7 +61,14 @@ namespace EngWords.ViewModels
             SaveWord = new DelegateCommand(AddNewWord);
             ShowTheRest = new DelegateCommand(PaintFG);
             OpenWordsList = new DelegateCommand(ShowWordsList);
+            OpenTestView = new DelegateCommand(OpenTestViewForm);
             _regionManager = regionManager;
+        }
+
+        private void OpenTestViewForm()
+        {
+            TestView ww = new TestView();
+            ww.Show();
         }
 
         private void ShowWordsList()
@@ -76,16 +85,6 @@ namespace EngWords.ViewModels
         private void ShowRandomWord()
         {
             int tempx = rndFG.Next(2);
-            //if (tempx == 1)
-            //{
-            //    RLBOutRG = "#DDFFFFFF";
-            //    LLbOutFG = "#00000000";
-            //}
-            //else
-            //{
-            //    RLBOutRG = "#00000000";
-            //    LLbOutFG = "#DDFFFFFF";
-            //}
             RLBOutFG = "#00000000";
             LLBOutFG = "#DDFFFFFF";
             Task.Run(async () => await GetRandomWord());
@@ -99,7 +98,6 @@ namespace EngWords.ViewModels
                 _rusTxtInX = _rusTxtIn;
                 _uzbTxtInX = _uzbTxtIn;
                 Task.Run(async () => await SaveWords());
-
                 EngTxtIn = null;
                 RusTxtIn = null;
                 UzbTxtIn = null;
