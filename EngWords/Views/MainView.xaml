@@ -153,7 +153,7 @@
                 Visibility="Hidden" Cursor="Hand" Padding="0"/>
 
         <!--#region SedeBar-->
-        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Background="#1b262c" Width="0">
+        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Background="#1b262c" Width="220">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -174,7 +174,8 @@
                                                   AncestorType=Window}}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
-                <!--<materialDesign:PackIcon Kind="LocationExit" Width="30" Height="30"/>-->
+                <!--<materialDesign:PackIcon Kind="login" Width="30" Height="30"/>-->
+                
             </Button>
         </Grid>
         <!--#endregion SedeBar-->
