@@ -162,6 +162,9 @@
                 <Button x:Name="OpenList" Command="{Binding OpenWordsList}"
                         Content="All Words" Background="#0f4c75" 
                         BorderBrush="#FF0F4C75" Margin="10,30,10,0"/>
+                <Button x:Name="OpenTest" Command="{Binding OpenTestView}"
+                        Content="WebBrowser" Background="#0f4c75" 
+                        BorderBrush="#FF0F4C75" Margin="10,30,10,0"/>
             </StackPanel>
             <Button Content="Exit" Grid.Row="1" VerticalAlignment="Bottom" Padding="0"
                     Background="#0f4c75" BorderBrush="#FF0F4C75" Cursor="Hand"

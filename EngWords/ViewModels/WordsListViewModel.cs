@@ -30,24 +30,24 @@ namespace EngWords.ViewModels
         public WordsListViewModel(IRegionManager regionManager, IWordRepository wordRepo)
         {
             Task.Run(async () => await GetAllWords(wordRepo));
-            DeleteWord = new DelegateCommand<Word>(DeleteWordFrom);
-            EditWord = new DelegateCommand<Word>(EditWordFrom);
+            DeleteWord = new DelegateCommand<Word>(DeleteWordForm);
+            EditWord = new DelegateCommand<Word>(EditWordForm);
             CloseWordsList = new DelegateCommand(HideWordsList);
             _regionManager = regionManager;
             iWorRepo = wordRepo;
         }
 
-        private void EditWordFrom(Word obj)
+        private void EditWordForm(Word obj)
         {
             var parameters = new NavigationParameters();
             parameters.Add("word", obj);
 
             if (obj != null)
-                _regionManager.RequestNavigate("ContentRegion", "UpdateWordView", parameters);
+                _regionManager.RequestNavigate("ContentRegion2", "UpdateWordView", parameters);
             //_regionManager.RequestNavigate("ContentRegion", "UpdateWordView");
         }
 
-        private void DeleteWordFrom(Word word)
+        private void DeleteWordForm(Word word)
         {
             var result = MessageBox.Show("Are you shure you want to delete the word?", "Word deleting!", MessageBoxButton.YesNo, MessageBoxImage.Question);
             switch (result)
