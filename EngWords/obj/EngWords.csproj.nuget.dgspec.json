@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\EngWords\\EngWords\\EngWords.csproj": {}
+    "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\EngWords.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\EngWords\\EngWords\\EngWords.csproj": {
+    "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\EngWords.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\EngWords\\EngWords\\EngWords.csproj",
+        "projectUniqueName": "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\EngWords.csproj",
         "projectName": "EngWords",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\EngWords\\EngWords\\EngWords.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\EngWords\\EngWords\\obj\\",
+        "projectPath": "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\EngWords.csproj",
+        "packagesPath": "C:\\Users\\Futuricon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Futuricon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

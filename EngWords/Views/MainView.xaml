@@ -153,7 +153,7 @@
                 Visibility="Hidden" Cursor="Hand" Padding="0"/>
 
         <!--#region SedeBar-->
-        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Background="#1b262c" Width="220">
+        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Background="#1b262c" Width="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>

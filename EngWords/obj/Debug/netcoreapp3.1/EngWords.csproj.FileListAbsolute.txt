@@ -180,3 +180,5 @@ C:\Users\User\Documents\GitHub\EngWords\EngWords\obj\Debug\netcoreapp3.1\EngWord
 C:\Users\User\Documents\GitHub\EngWords\EngWords\obj\Debug\netcoreapp3.1\EngWords.pdb
 C:\Users\User\Documents\GitHub\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\TestView.g.cs
 C:\Users\User\Documents\GitHub\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\TestView.baml
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\TestView.g.cs
+C:\Users\Futuricon\source\repos\EngWords\EngWords\obj\Debug\netcoreapp3.1\Views\TestView.baml
