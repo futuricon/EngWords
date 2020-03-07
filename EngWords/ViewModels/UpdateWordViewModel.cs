@@ -41,6 +41,8 @@ namespace EngWords.ViewModels
         {
             Task.Run(async () => await UpdateWordById());
             _regionManager.Regions["ContentRegion2"].RemoveAll();
+            _regionManager.Regions["ContentRegion"].RemoveAll();
+            _regionManager.RequestNavigate("ContentRegion", "WordsListView");
         }
 
         public async Task UpdateWordById() => await Task.Run(() =>
