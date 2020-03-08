@@ -10,7 +10,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:local="clr-namespace:EngWords.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="900">
     <UserControl.Resources>
         <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#3282b8"/>
         <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="White"/>
@@ -39,13 +39,62 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Grid x:Name="listG">
-        <Button  Name="ButtonCloseList" 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.RowSpan="2" Name="ButtonCloseList" 
                 Background="#4C000000" BorderBrush="{x:Null}" 
                 VerticalAlignment="Stretch" Foreground="{x:Null}"
                 Command="{Binding CloseWordsList}"
                 Cursor="Hand" Padding="0" Height="{Binding ActualHeight, ElementName=listG}"/>
+        <Grid Margin="100,50,100,0" Background="#1b262c">
+            <Grid Width="670" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid >
+                    <!--<TextBox Text="{Binding EngTxtFd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             x:Name="EngIn" materialDesign:HintAssist.Hint=" English" Width="200" 
+                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,10,5,0" VerticalAlignment="Top"/>-->
+                    <ComboBox Width="200" Height="30" Foreground="White" IsEditable="True"
+                              BorderBrush="#FF0F4C75" Margin="5,10,5,0" VerticalAlignment="Top" Background="#FF1B262C"
+                              SelectedIndex="{Binding SelectedLang,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem>
+                            English
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Russian
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Uzbek
+                        </ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox Text="{Binding WordToFind, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             x:Name="RusIn" materialDesign:HintAssist.Hint=" Word" Width="200" 
+                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,10,5,0" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <!--<TextBox Text="{Binding UzbTxtFd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             x:Name="UzbIn" materialDesign:HintAssist.Hint=" Uzbek" Width="200" 
+                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,10,5,25" VerticalAlignment="Top"/>-->
+                    <!--<Button Content="Find" Command="{Binding FindWord}" Background="#0f4c75" Width="200"
+                            BorderBrush="#FF0F4C75" Margin="5,0,5,15" VerticalAlignment="Bottom"/>-->
+                    <Button Content="Find" Command="{Binding FindWord}" Background="#0f4c75" Width="200"
+                            BorderBrush="#FF0F4C75" Margin="5,8,5,0" VerticalAlignment="top"/>
+                </Grid>
+            </Grid>
+            <Rectangle Grid.ColumnSpan="3" Height="2" Fill="#FF171A20" VerticalAlignment="Bottom"/>
+        </Grid>
         
-        <Grid Margin="100,50,100,50">
+        <Grid Grid.Row="1" Margin="100,0,100,50">
             <StackPanel>
                 <Rectangle Height="51" Fill="#1b262c"/>
                 <Rectangle Height="47" Fill="#404955"/>
@@ -144,7 +193,7 @@
         </Grid>
 
         <!--#region Regions-->
-        <Grid>
+        <Grid Grid.RowSpan="2">
             <ContentControl prism:RegionManager.RegionName="ContentRegion2" />
         </Grid>
         <!--#endregion Regions-->

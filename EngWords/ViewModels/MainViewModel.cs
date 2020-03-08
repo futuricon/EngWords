@@ -94,9 +94,9 @@ namespace EngWords.ViewModels
         {
             if (_engTxtIn != null && _engTxtIn != "" && _rusTxtIn != null && _rusTxtIn != "" && _uzbTxtIn != null && _uzbTxtIn != "")
             {
-                _engTxtInX = _engTxtIn;
-                _rusTxtInX = _rusTxtIn;
-                _uzbTxtInX = _uzbTxtIn;
+                _engTxtInX = _engTxtIn.ToLower();
+                _rusTxtInX = _rusTxtIn.ToLower();
+                _uzbTxtInX = _uzbTxtIn.ToLower();
                 Task.Run(async () => await SaveWords());
                 EngTxtIn = null;
                 RusTxtIn = null;

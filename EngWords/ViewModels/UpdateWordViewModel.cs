@@ -47,7 +47,7 @@ namespace EngWords.ViewModels
 
         public async Task UpdateWordById() => await Task.Run(() =>
         {
-            Word wr = new Word { Eng = EngTxtUp, Rus = RusTxtUp, Uzb = UzbTxtUp, Id = IdTxtUp };
+            Word wr = new Word { Eng = EngTxtUp.ToLower(), Rus = RusTxtUp.ToLower(), Uzb = UzbTxtUp.ToLower(), Id = IdTxtUp };
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
                 //context.Words.Add(wr);

@@ -12,7 +12,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize" Icon="/En.ico">
+        Title="MainWindow" Height="600" Width="900" ResizeMode="CanResize" Icon="/En.ico">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#3282b8"/>
         <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="White"/>
@@ -115,7 +115,7 @@
             </StackPanel>
 
             <StackPanel Margin="0,0,0,0" Grid.Row="2" Orientation="Horizontal" 
-                        HorizontalAlignment="Center" VerticalAlignment="Center">
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Width="670">
                 
                 <StackPanel Margin="0,20,20,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -162,9 +162,9 @@
                 <Button x:Name="OpenList" Command="{Binding OpenWordsList}"
                         Content="All Words" Background="#0f4c75" 
                         BorderBrush="#FF0F4C75" Margin="10,30,10,0"/>
-                <Button x:Name="OpenTest" Command="{Binding OpenTestView}"
+                <!--<Button x:Name="OpenTest" Command="{Binding OpenTestView}"
                         Content="WebBrowser" Background="#0f4c75" 
-                        BorderBrush="#FF0F4C75" Margin="10,30,10,0"/>
+                        BorderBrush="#FF0F4C75" Margin="10,30,10,0"/>-->
             </StackPanel>
             <Button Content="Exit" Grid.Row="1" VerticalAlignment="Bottom" Padding="0"
                     Background="#0f4c75" BorderBrush="#FF0F4C75" Cursor="Hand"

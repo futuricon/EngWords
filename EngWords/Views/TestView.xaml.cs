@@ -21,7 +21,7 @@ namespace EngWords.Views
         public TestView()
         {
             InitializeComponent();
-            WebBrowserX.Navigate("https://www.google.com/");
+            WebBrowserX.Navigate("https://translate.google.com/");
         }
     }
 }

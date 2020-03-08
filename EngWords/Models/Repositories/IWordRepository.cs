@@ -10,6 +10,7 @@ namespace EngWords.Models.Repositories
     public interface IWordRepository { 
         IEnumerable<Word> GetWord();
         Word GetCurrentWord(Word obj);
+        IEnumerable<Word> GetDesiredWord(string word, string lang);
     }
 
     public class WordRepository : IWordRepository
@@ -32,9 +33,28 @@ namespace EngWords.Models.Repositories
             //}
             return context.Words.OrderBy(x=>x.Eng).ToList();
         }
+
         public Word GetCurrentWord(Word obj)
         {
             return context.Words.Where(x => x.Id == obj.Id).FirstOrDefault();
+        }
+
+        public IEnumerable<Word> GetDesiredWord(string word, string lang)
+        {
+            IEnumerable<Word> Collection;
+            switch (lang)
+            {
+                case "0": Collection = context.Words.Where(x => x.Eng.Contains(word)).OrderBy(z=>z.Eng).ToList();
+                    break;
+                case "1": Collection = context.Words.Where(x => x.Rus.Contains(word)).OrderBy(z => z.Rus).ToList();
+                    break;
+                case "2": Collection = context.Words.Where(x => x.Uzb.Contains(word)).OrderBy(z => z.Uzb).ToList();
+                    break;
+                default:
+                    Collection = null;
+                    break;
+            }
+            return Collection;
         }
     }
 }

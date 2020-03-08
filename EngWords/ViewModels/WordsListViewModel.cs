@@ -19,9 +19,16 @@ namespace EngWords.ViewModels
 {
     class WordsListViewModel : BindableBase
     {
+        private string _wordToFind;
+        private string _selectedLang;
+
+        public string WordToFind { get { return _wordToFind; } set { SetProperty(ref _wordToFind, value); } }
+        public string SelectedLang { get { return _selectedLang; } set { SetProperty(ref _selectedLang, value); } }
+
         public DelegateCommand<Word> EditWord { get; private set; }
         public DelegateCommand<Word> DeleteWord { get; private set; }
         public DelegateCommand CloseWordsList { get; private set; }
+        public DelegateCommand FindWord { get; private set; }
         public IRegionManager _regionManager { get; }
         public IWordRepository iWorRepo { get; set; }
         public ObservableCollection<Word> _wordsCollection;
@@ -33,8 +40,26 @@ namespace EngWords.ViewModels
             DeleteWord = new DelegateCommand<Word>(DeleteWordForm);
             EditWord = new DelegateCommand<Word>(EditWordForm);
             CloseWordsList = new DelegateCommand(HideWordsList);
+            FindWord = new DelegateCommand(FinWordFrom);
             _regionManager = regionManager;
             iWorRepo = wordRepo;
+        }
+
+        private async void FinWordFrom()
+        {
+            if (WordToFind != null && WordToFind !="")
+            {
+                WordToFind = WordToFind.ToLower();
+                await Task.Run(() => { 
+                    WordsCollection = new ObservableCollection<Word>(iWorRepo.GetDesiredWord(WordToFind, SelectedLang));
+                });   
+            }
+            else
+            {
+                await Task.Run(() =>{
+                    WordsCollection = new ObservableCollection<Word>(iWorRepo.GetWord());
+                });
+            }
         }
 
         private void EditWordForm(Word obj)
