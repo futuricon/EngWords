@@ -26,19 +26,19 @@
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding EngTxtUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="EngIn" materialDesign:HintAssist.Hint=" English" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,0,5,57"/>
+                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,0,5,57" FontSize="18"/>
                 </StackPanel>
 
                 <StackPanel Margin="0,20,0,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding RusTxtUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="RusIn" materialDesign:HintAssist.Hint=" Russian" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,0,5,25"/>
+                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,0,5,25" FontSize="18"/>
                     <Button Content="Cancel"
                             Command="{Binding CancelUpdate}"
-                            Background="#0f4c75" 
+                            Background="#0f4c75" FontSize="18"
                             BorderBrush="#FF0F4C75" Margin="5,0,5,0"/>
                 </StackPanel>
 
@@ -46,10 +46,10 @@
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding UzbTxtUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="UzbIn" materialDesign:HintAssist.Hint=" Uzbek" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,0,5,25"/>
+                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,0,5,25" FontSize="18"/>
                     <Button Content="Save" Command="{Binding UpdateWord}" Background="#0f4c75" 
-                            BorderBrush="#FF0F4C75" Margin="5,0,5,0"/>
+                            BorderBrush="#FF0F4C75" Margin="5,0,5,0" FontSize="18"/>
                 </StackPanel>
 
             </StackPanel>

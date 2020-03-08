@@ -39,24 +39,24 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Grid x:Name="listG">
+        
         <Button Grid.RowSpan="2" Name="ButtonCloseList" 
                 Background="#4C000000" BorderBrush="{x:Null}" 
                 VerticalAlignment="Stretch" Foreground="{x:Null}"
                 Command="{Binding CloseWordsList}"
                 Cursor="Hand" Padding="0" Height="{Binding ActualHeight, ElementName=listG}"/>
+        
         <Grid Margin="100,40,100,0" Height="60" VerticalAlignment="Top" Background="#1b262c">
+            
             <Grid Width="670" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Grid >
-                    <!--<TextBox Text="{Binding EngTxtFd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                             x:Name="EngIn" materialDesign:HintAssist.Hint=" English" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,10,5,0" VerticalAlignment="Top"/>-->
-                    <ComboBox Width="200" Height="30" Foreground="White" IsEditable="True"
+                
+                <Grid>
+                    <ComboBox Width="200" Height="32" Foreground="White" IsEditable="True" FontSize="18" Padding="0"
                               BorderBrush="#FF0F4C75" Margin="5,10,5,0" VerticalAlignment="Top" Background="#FF1B262C"
                               SelectedIndex="{Binding SelectedLang,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
                         <ComboBoxItem>
@@ -70,23 +70,21 @@
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
+                
                 <Grid Grid.Column="1">
                     <TextBox Text="{Binding WordToFind, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="RusIn" materialDesign:HintAssist.Hint=" Word" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,10,5,0" VerticalAlignment="Top"/>
+                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Margin="5,10,5,0" VerticalAlignment="Top" FontSize="18"/>
                 </Grid>
+                
                 <Grid Grid.Column="2">
-                    <!--<TextBox Text="{Binding UzbTxtFd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                             x:Name="UzbIn" materialDesign:HintAssist.Hint=" Uzbek" Width="200" 
-                             Height="30" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
-                             Margin="5,10,5,25" VerticalAlignment="Top"/>-->
-                    <!--<Button Content="Find" Command="{Binding FindWord}" Background="#0f4c75" Width="200"
-                            BorderBrush="#FF0F4C75" Margin="5,0,5,15" VerticalAlignment="Bottom"/>-->
                     <Button Content="Find" Command="{Binding FindWord}" Background="#0f4c75" Width="200"
-                            BorderBrush="#FF0F4C75" Margin="5,8,5,0" VerticalAlignment="top"/>
+                            BorderBrush="#FF0F4C75" Margin="5,8,5,0" VerticalAlignment="top" FontSize="18"/>
                 </Grid>
+                
             </Grid>
+            
             <Rectangle Grid.ColumnSpan="3" Height="2" Fill="#FF171A20" VerticalAlignment="Bottom"/>
         </Grid>
         
@@ -125,7 +123,7 @@
                                 <DataTemplate>
                                     <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
                                         <Label Content="{Binding Eng}" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" 
-                                               Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                               Foreground="#FFF0F0F0" VerticalAlignment="Center" FontSize="18"/>
                                     </Border>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -137,7 +135,7 @@
                                 <DataTemplate>
                                     <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
                                         <Label Content="{Binding Rus}" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" 
-                                               Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                               Foreground="#FFF0F0F0" VerticalAlignment="Center" FontSize="18"/>
                                     </Border>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -149,7 +147,7 @@
                                 <DataTemplate>
                                     <Border BorderBrush="#171a20" BorderThickness="1,0,0,0" Margin="-6,-23,0,-23">
                                         <Label Content="{Binding Uzb}" Padding="10,0,0,0" Margin="0" HorizontalContentAlignment="Left" 
-                                               Foreground="#FFF0F0F0" VerticalAlignment="Center"/>
+                                               Foreground="#FFF0F0F0" VerticalAlignment="Center" FontSize="18"/>
                                     </Border>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
