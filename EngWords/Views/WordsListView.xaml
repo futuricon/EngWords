@@ -39,16 +39,12 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Grid x:Name="listG">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="110"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <Button Grid.RowSpan="2" Name="ButtonCloseList" 
                 Background="#4C000000" BorderBrush="{x:Null}" 
                 VerticalAlignment="Stretch" Foreground="{x:Null}"
                 Command="{Binding CloseWordsList}"
                 Cursor="Hand" Padding="0" Height="{Binding ActualHeight, ElementName=listG}"/>
-        <Grid Margin="100,50,100,0" Background="#1b262c">
+        <Grid Margin="100,40,100,0" Height="60" VerticalAlignment="Top" Background="#1b262c">
             <Grid Width="670" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -94,7 +90,7 @@
             <Rectangle Grid.ColumnSpan="3" Height="2" Fill="#FF171A20" VerticalAlignment="Bottom"/>
         </Grid>
         
-        <Grid Grid.Row="1" Margin="100,0,100,50">
+        <Grid  Margin="100,100,100,50">
             <StackPanel>
                 <Rectangle Height="51" Fill="#1b262c"/>
                 <Rectangle Height="47" Fill="#404955"/>
