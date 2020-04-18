@@ -47,7 +47,7 @@ namespace EngWords.ViewModels
 
         private async void FinWordFrom()
         {
-            if (WordToFind != null && WordToFind !="")
+            if (WordToFind != null && WordToFind !="" && SelectedLang != null)
             {
                 WordToFind = WordToFind.ToLower();
                 await Task.Run(() => { 

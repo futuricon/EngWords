@@ -85,7 +85,7 @@
                 <StackPanel Margin="0,20,20,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label Content="{Binding EngLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                        x:Name="EngOut" Width="200" Height="32" FontSize="18"
+                        x:Name="EngOut" Width="200" Height="33" FontSize="18"
                         Margin="5,0,5,57" BorderThickness="0,0,0,1" 
                         BorderBrush="#FF0F4C75" Foreground="{Binding LLBOutFG}"/>
                 </StackPanel>
@@ -93,7 +93,7 @@
                 <StackPanel Margin="0,20,0,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label Content="{Binding RusLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                        x:Name="RusOut" Width="200" Height="32" FontSize="18"
+                        x:Name="RusOut" Width="200" Height="33" FontSize="18"
                         Margin="5,0,5,25" BorderThickness="0,0,0,1" 
                         BorderBrush="#FF0F4C75" Foreground="{Binding RLBOutFG}"/>
                     <Button Command="{Binding ShowTheRest}"
@@ -104,7 +104,7 @@
                 <StackPanel Margin="20,20,0,20" Orientation="Vertical" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label Content="{Binding UzbLbOut, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                        x:Name="UzbOut" Width="200" Height="32" FontSize="18"
+                        x:Name="UzbOut" Width="200" Height="33" FontSize="18"
                         Margin="5,0,5,25" BorderThickness="0,0,0,1" 
                         BorderBrush="#FF0F4C75" Foreground="{Binding RLBOutFG}"/>
                     <Button Command="{Binding Randomize}" FontSize="18"
@@ -121,7 +121,7 @@
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding EngTxtIn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="EngIn" materialDesign:HintAssist.Hint=" English" Width="200" 
-                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Height="33" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
                              Margin="5,0,5,57" FontSize="18"/>
                 </StackPanel>
                 
@@ -129,7 +129,7 @@
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding RusTxtIn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="RusIn" materialDesign:HintAssist.Hint=" Russian" Width="200" 
-                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Height="33" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
                              Margin="5,0,5,57" FontSize="18"/>
                 </StackPanel>
 
@@ -137,7 +137,7 @@
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Text="{Binding UzbTxtIn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              x:Name="UzbIn" materialDesign:HintAssist.Hint=" Uzbek" Width="200" 
-                             Height="32" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
+                             Height="33" CaretBrush="White" Foreground="White" BorderBrush="#FF0F4C75" 
                              Margin="5,0,5,25" FontSize="18"/>
                     <Button Content="Save" Command="{Binding SaveWord}" Background="#0f4c75" 
                             BorderBrush="#FF0F4C75" Margin="5,0,5,0" FontSize="18"/>
