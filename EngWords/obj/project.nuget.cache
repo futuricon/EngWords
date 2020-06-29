@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "dgSpecHash": "gZosHrP9GnGZCCJl8v0aeW8AkiEDsW6bokCaL/3lPeWQy3I0EEAW4k4P0HtemXMx6vfBuocKGX8OLER45roBjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Futuricon\\source\\repos\\EngWords\\EngWords\\EngWords.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Futuricon\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\extended.wpf.toolkit\\3.8.1\\extended.wpf.toolkit.3.8.1.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\materialdesigncolors\\1.2.2\\materialdesigncolors.1.2.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\materialdesignthemes\\3.0.1\\materialdesignthemes.3.0.1.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.data.sqlite.core\\3.1.2\\microsoft.data.sqlite.core.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.2\\microsoft.dotnet.platformabstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.2\\microsoft.entityframeworkcore.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.2\\microsoft.entityframeworkcore.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.2\\microsoft.entityframeworkcore.analyzers.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.2\\microsoft.entityframeworkcore.design.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.2\\microsoft.entityframeworkcore.relational.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\3.1.2\\microsoft.entityframeworkcore.sqlite.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\3.1.2\\microsoft.entityframeworkcore.sqlite.core.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.2\\microsoft.entityframeworkcore.tools.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.2\\microsoft.extensions.caching.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.2\\microsoft.extensions.caching.memory.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.2\\microsoft.extensions.configuration.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.2\\microsoft.extensions.configuration.binder.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.2\\microsoft.extensions.dependencyinjection.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.2\\microsoft.extensions.dependencyinjection.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.1.2\\microsoft.extensions.dependencymodel.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.logging\\3.1.2\\microsoft.extensions.logging.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.2\\microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\microsoftexpressioninteractions\\3.0.40218\\microsoftexpressioninteractions.3.0.40218.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\prism.unity\\7.2.0.1422\\prism.unity.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\prism.wpf\\7.2.0.1422\\prism.wpf.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\unity.abstractions\\5.11.1\\unity.abstractions.5.11.1.nupkg.sha512",
+    "C:\\Users\\Futuricon\\.nuget\\packages\\unity.container\\5.11.1\\unity.container.5.11.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Extended.Wpf.Toolkit 3.8.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Extended.Wpf.Toolkit",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"MicrosoftExpressionInteractions 3.0.40218\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "MicrosoftExpressionInteractions",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
